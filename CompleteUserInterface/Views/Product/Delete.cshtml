@@ -1,0 +1,11 @@
+﻿@model Product
+@{
+}
+<h1>Delete Product</h1>
+<form asp-controller="Product" asp-action="Delete" method="post">
+    <div class="form-group">
+        <label asp-for="ProductId"></label>
+        <input asp-for="ProductId" class="form-control col-xl-3" required />
+    </div>
+    <button class="btn btn-success" type="submit">Delete Item</button>
+</form>

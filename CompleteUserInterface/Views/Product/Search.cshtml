@@ -1,0 +1,12 @@
+﻿
+@model Product
+@{
+}
+<h1>Search</h1>
+<form asp-controller="Product" asp-action="Details" method="post">
+    <div class="form-group">
+        <label asp-for="ProductId"></label>
+        <input asp-for="ProductId" class="form-control col-xl-3" required />
+    </div>
+    <button class="btn btn-success" type="submit">Search Item</button>
+</form>

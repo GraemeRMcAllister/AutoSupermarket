@@ -1,0 +1,28 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                ItemId
+            </th>
+            <th>
+                Count
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            @if ((int)item.Count < 6)
+            { 
+            <tr>
+                <td>
+                    @item.ProductId
+                </td>
+                <td>
+                    @item.Count
+                </td>
+            </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                AddressLineOne
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.StaffId
+                </td>
+                <td>
+                    @item.FirstNames
+                </td>
+                <td>
+                    @item.LastNames
+                </td>
+                <td>
+                    @item.AddressLineOne
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="staff" asp-action="AddStaff" class="btn btn-primary">New Staff</a>
+<a asp-controller="staff" asp-action="UpdateStaff" class="btn btn-primary">Update Staff</a>
+<a asp-controller="staff" asp-action="DeleteStaff" class="btn btn-primary">Delete Staff</a>

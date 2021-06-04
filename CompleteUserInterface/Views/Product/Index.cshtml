@@ -1,0 +1,35 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                ProductId
+            </th>
+            <th>
+                ProductName
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ProductId
+                </td>
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    £@item.Price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="product" asp-action="Create" class="btn btn-primary">New Product</a>
+<a asp-controller="product" asp-action="Details" class="btn btn-primary">Search/Edit Product</a>
+<a asp-controller="product" asp-action="Edit" class="btn btn-primary">Update Price</a>
+<a asp-controller="product" asp-action="Delete" class="btn btn-primary">Delete Product</a>

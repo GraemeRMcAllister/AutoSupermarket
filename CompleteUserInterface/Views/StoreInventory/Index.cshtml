@@ -1,0 +1,26 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                ItemId
+            </th>
+            <th>
+                Count
+            </th>
+        </tr>
+    </thead>
+    <h1>All Stock</h1>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.ProductId
+                </td>
+                <td>
+                    @item.Count
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
